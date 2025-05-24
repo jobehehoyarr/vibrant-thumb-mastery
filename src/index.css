@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -498,11 +497,11 @@ body {
 }
 
 .left-scroll .thumbnail-row-content {
-    animation: scroll-left 80s linear infinite;
+    animation: scroll-left 120s linear infinite;
 }
 
 .right-scroll .thumbnail-row-content {
-    animation: scroll-right 80s linear infinite;
+    animation: scroll-right 120s linear infinite;
 }
 
 .thumbnail-item {
@@ -542,7 +541,7 @@ body {
 
 /* Slow down animation on hover instead of stopping */
 .thumbnail-row:hover .thumbnail-row-content {
-    animation-duration: 240s;
+    animation-duration: 360s;
 }
 
 .thumbnail-item img {
@@ -582,25 +581,22 @@ body {
 
 .testimonials-content {
     display: flex;
-    gap: 0;
-    animation: testimonial-scroll 60s linear infinite;
+    gap: 2rem;
+    animation: testimonial-scroll 100s linear infinite;
     white-space: nowrap;
 }
 
 .testimonial-card {
     background: rgba(0, 0, 0, 0.03);
-    padding: 1rem 2rem;
-    border-radius: 25px;
+    padding: 2rem;
+    border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    min-width: fit-content;
+    min-width: 350px;
     flex-shrink: 0;
-    white-space: nowrap;
+    white-space: normal;
     backdrop-filter: blur(10px);
-    margin-right: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    position: relative;
 }
 
 .testimonial-card:hover {
@@ -609,25 +605,41 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 .testimonial-avatar {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-}
-
-.testimonial-text {
-    color: #333;
-    font-weight: 500;
-    font-size: 0.95rem;
 }
 
 .testimonial-author {
+    flex: 1;
+}
+
+.testimonial-author h4 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.testimonial-author span {
     color: #666;
     font-size: 0.85rem;
-    margin-left: 0.5rem;
+}
+
+.testimonial-card p {
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* Contact Section */
@@ -909,7 +921,7 @@ body {
 
 /* Slow down testimonials on hover instead of stopping */
 .testimonials-marquee:hover .testimonials-content {
-    animation-duration: 180s;
+    animation-duration: 300s;
 }
 
 .clients-scroll:hover .clients-content {

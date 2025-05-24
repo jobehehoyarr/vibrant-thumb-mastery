@@ -434,35 +434,60 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section - Updated to line format */}
+      {/* Testimonials Section - Updated to match design */}
       <section id="testimonials" className="testimonials">
         <h2 className="testimonials-title">Testimonials</h2>
         <div className="testimonials-marquee">
           <div className="testimonials-content">
             <div className="testimonial-card">
-              <img src="/api/placeholder/40/40" alt="Shondie Andretti" className="testimonial-avatar" />
-              <span className="testimonial-text">"I was impressed by Hasnaat's creativity and attention to detail. He's a fellow youtuber and made the design process enjoyable!"</span>
-              <span className="testimonial-author">- Shondie Andretti</span>
+              <div className="testimonial-header">
+                <img src="/api/placeholder/50/50" alt="Shondie Andretti" className="testimonial-avatar" />
+                <div className="testimonial-author">
+                  <h4>Shondie Andretti</h4>
+                  <span>Youtube Content Creator</span>
+                </div>
+              </div>
+              <p>"I was impressed by Hasnaat's creativity and attention to detail. He's a fellow youtuber and made the design process enjoyable!"</p>
             </div>
             <div className="testimonial-card">
-              <img src="/api/placeholder/40/40" alt="Corey Trades" className="testimonial-avatar" />
-              <span className="testimonial-text">"Hasnaat is a true master of his craft! As a marketing agency and content creator with over 700K followers, I've worked with countless designers, but Hasnaat's eye-catching thumbnails are truly a cut above the rest."</span>
-              <span className="testimonial-author">- Corey Trades</span>
+              <div className="testimonial-header">
+                <img src="/api/placeholder/50/50" alt="Corey Trades" className="testimonial-avatar" />
+                <div className="testimonial-author">
+                  <h4>Corey Trades</h4>
+                  <span>Marketing agency and content creator</span>
+                </div>
+              </div>
+              <p>"Hasnaat is a true master of his craft! As a marketing agency and content creator with over 700K followers, I've worked with countless designers, but Hasnaat's eye-catching thumbnails are truly a cut above the rest."</p>
             </div>
             <div className="testimonial-card">
-              <img src="/api/placeholder/40/40" alt="Abdullah" className="testimonial-avatar" />
-              <span className="testimonial-text">"Even though I am not one of Hasnaat's clients, his work is still very impressive to me as a fellow designer, he makes very unique thumbnails and his quality and focus to his craft is incredible."</span>
-              <span className="testimonial-author">- Abdullah</span>
+              <div className="testimonial-header">
+                <img src="/api/placeholder/50/50" alt="Abdullah" className="testimonial-avatar" />
+                <div className="testimonial-author">
+                  <h4>Abdullah</h4>
+                  <span>Agency Owner</span>
+                </div>
+              </div>
+              <p>"Even though I am not one of Hasnaat's clients, his work is still very impressive to me as a fellow designer, he makes very unique thumbnails and his quality and focus to his craft is incredible."</p>
             </div>
             <div className="testimonial-card">
-              <img src="/api/placeholder/40/40" alt="Georgejustdidit" className="testimonial-avatar" />
-              <span className="testimonial-text">"Elite Thumbnail Maker! Worth every dime. You don't want to be in the Trenches for 10 Hours, I promise you!!!"</span>
-              <span className="testimonial-author">- Georgejustdidit</span>
+              <div className="testimonial-header">
+                <img src="/api/placeholder/50/50" alt="Georgejustdidit" className="testimonial-avatar" />
+                <div className="testimonial-author">
+                  <h4>Georgejustdidit</h4>
+                  <span>Youtube Content Creator</span>
+                </div>
+              </div>
+              <p>"Elite Thumbnail Maker! Worth every dime. You don't want to be in the Trenches for 10 Hours, I promise you!!!"</p>
             </div>
             <div className="testimonial-card">
-              <img src="/api/placeholder/40/40" alt="Felon's Footprint" className="testimonial-avatar" />
-              <span className="testimonial-text">"Working with Hasnaat has been an absolute pleasure. He's a dedicated thumbnail artist with a great eye for design, consistently delivering thumbnails that stand out and fit my content perfectly."</span>
-              <span className="testimonial-author">- Felon's Footprint</span>
+              <div className="testimonial-header">
+                <img src="/api/placeholder/50/50" alt="Felon's Footprint" className="testimonial-avatar" />
+                <div className="testimonial-author">
+                  <h4>Felon's Footprint</h4>
+                  <span>Youtube Content Creator</span>
+                </div>
+              </div>
+              <p>"Working with Hasnaat has been an absolute pleasure. He's a dedicated thumbnail artist with a great eye for design, consistently delivering thumbnails that stand out and fit my content perfectly."</p>
             </div>
           </div>
         </div>
