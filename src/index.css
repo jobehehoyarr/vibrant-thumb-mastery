@@ -498,11 +498,11 @@ body {
 }
 
 .left-scroll .thumbnail-row-content {
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 80s linear infinite;
 }
 
 .right-scroll .thumbnail-row-content {
-    animation: scroll-right 40s linear infinite;
+    animation: scroll-right 80s linear infinite;
 }
 
 .thumbnail-item {
@@ -542,7 +542,7 @@ body {
 
 /* Slow down animation on hover instead of stopping */
 .thumbnail-row:hover .thumbnail-row-content {
-    animation-duration: 120s;
+    animation-duration: 240s;
 }
 
 .thumbnail-item img {
