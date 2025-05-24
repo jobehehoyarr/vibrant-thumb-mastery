@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const Index = () => {
@@ -76,6 +75,44 @@ const Index = () => {
       form.reset();
     };
 
+    // Duplicate content for seamless scrolling
+    const duplicateContent = () => {
+      // Duplicate thumbnail rows content
+      document.querySelectorAll('.thumbnail-row-content').forEach(content => {
+        const children = Array.from(content.children);
+        // Add multiple duplicates for seamless loop
+        for (let i = 0; i < 3; i++) {
+          children.forEach(child => {
+            const clone = child.cloneNode(true);
+            content.appendChild(clone);
+          });
+        }
+      });
+
+      // Duplicate testimonials content
+      const testimonialsContent = document.querySelector('.testimonials-content');
+      if (testimonialsContent) {
+        const children = Array.from(testimonialsContent.children);
+        // Add multiple duplicates for seamless loop
+        for (let i = 0; i < 3; i++) {
+          children.forEach(child => {
+            const clone = child.cloneNode(true);
+            testimonialsContent.appendChild(clone);
+          });
+        }
+      }
+
+      // Duplicate clients content
+      const clientsContent = document.querySelector('.clients-content');
+      if (clientsContent) {
+        const children = Array.from(clientsContent.children);
+        children.forEach(child => {
+          const clone = child.cloneNode(true);
+          clientsContent.appendChild(clone);
+        });
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
     document.addEventListener('click', handleFAQClick);
     document.addEventListener('click', handleStepClick);
@@ -87,7 +124,7 @@ const Index = () => {
 
     const titleInterval = setInterval(animateTitle, 3000);
 
-    // Set initial active states
+    // Set initial active states and duplicate content
     setTimeout(() => {
       const firstTitle = document.querySelector('.animated-title');
       if (firstTitle) {
@@ -103,6 +140,9 @@ const Index = () => {
       if (firstProcessStep) {
         firstProcessStep.classList.add('active');
       }
+
+      // Duplicate content for seamless scrolling
+      duplicateContent();
     }, 100);
 
     return () => {
@@ -314,25 +354,25 @@ const Index = () => {
             <div className="thumbnail-row left-scroll">
               <div className="thumbnail-row-content">
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 1" />
+                  <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=280&h=157&fit=crop" alt="Thumbnail 1" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 2" />
+                  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=280&h=157&fit=crop" alt="Thumbnail 2" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 3" />
+                  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=280&h=157&fit=crop" alt="Thumbnail 3" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 4" />
+                  <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=280&h=157&fit=crop" alt="Thumbnail 4" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 5" />
+                  <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=280&h=157&fit=crop" alt="Thumbnail 5" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 6" />
+                  <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=280&h=157&fit=crop" alt="Thumbnail 6" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 7" />
+                  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=280&h=157&fit=crop" alt="Thumbnail 7" />
                 </div>
               </div>
             </div>
@@ -341,25 +381,25 @@ const Index = () => {
             <div className="thumbnail-row right-scroll">
               <div className="thumbnail-row-content">
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 8" />
+                  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=280&h=157&fit=crop" alt="Thumbnail 8" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 9" />
+                  <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=280&h=157&fit=crop" alt="Thumbnail 9" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 10" />
+                  <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=280&h=157&fit=crop" alt="Thumbnail 10" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 11" />
+                  <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=280&h=157&fit=crop" alt="Thumbnail 11" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 12" />
+                  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=280&h=157&fit=crop" alt="Thumbnail 12" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 13" />
+                  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=280&h=157&fit=crop" alt="Thumbnail 13" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 14" />
+                  <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=280&h=157&fit=crop" alt="Thumbnail 14" />
                 </div>
               </div>
             </div>
@@ -368,25 +408,25 @@ const Index = () => {
             <div className="thumbnail-row left-scroll">
               <div className="thumbnail-row-content">
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 15" />
+                  <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=280&h=157&fit=crop" alt="Thumbnail 15" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 16" />
+                  <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=280&h=157&fit=crop" alt="Thumbnail 16" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 17" />
+                  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=280&h=157&fit=crop" alt="Thumbnail 17" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 18" />
+                  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=280&h=157&fit=crop" alt="Thumbnail 18" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 19" />
+                  <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=280&h=157&fit=crop" alt="Thumbnail 19" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 20" />
+                  <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=280&h=157&fit=crop" alt="Thumbnail 20" />
                 </div>
                 <div className="thumbnail-item">
-                  <img src="/lovable-uploads/d7132947-a6be-4684-8050-a28c13551d97.png" alt="Thumbnail 21" />
+                  <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=280&h=157&fit=crop" alt="Thumbnail 21" />
                 </div>
               </div>
             </div>
@@ -394,60 +434,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section - Updated to line format */}
       <section id="testimonials" className="testimonials">
         <h2 className="testimonials-title">Testimonials</h2>
         <div className="testimonials-marquee">
           <div className="testimonials-content">
             <div className="testimonial-card">
-              <div className="testimonial-header">
-                <img src="/api/placeholder/50/50" alt="Shondie Andretti" className="testimonial-avatar" />
-                <div className="testimonial-author">
-                  <h4>Shondie Andretti</h4>
-                  <span>Youtube Content Creator</span>
-                </div>
-              </div>
-              <p>I was impressed by Hasnaat's creativity and attention to detail. He's a fellow youtuber and made the design process enjoyable!</p>
+              <img src="/api/placeholder/40/40" alt="Shondie Andretti" className="testimonial-avatar" />
+              <span className="testimonial-text">"I was impressed by Hasnaat's creativity and attention to detail. He's a fellow youtuber and made the design process enjoyable!"</span>
+              <span className="testimonial-author">- Shondie Andretti</span>
             </div>
             <div className="testimonial-card">
-              <div className="testimonial-header">
-                <img src="/api/placeholder/50/50" alt="Corey Trades" className="testimonial-avatar" />
-                <div className="testimonial-author">
-                  <h4>Corey Trades</h4>
-                  <span>Marketing agency and content creator</span>
-                </div>
-              </div>
-              <p>Hasnaat is a true master of his craft! As a marketing agency and a content creator with over 700K followers, I've worked with countless designers, but Hasnaat's eye-catching thumbnails are truly a cut above the rest.</p>
+              <img src="/api/placeholder/40/40" alt="Corey Trades" className="testimonial-avatar" />
+              <span className="testimonial-text">"Hasnaat is a true master of his craft! As a marketing agency and content creator with over 700K followers, I've worked with countless designers, but Hasnaat's eye-catching thumbnails are truly a cut above the rest."</span>
+              <span className="testimonial-author">- Corey Trades</span>
             </div>
             <div className="testimonial-card">
-              <div className="testimonial-header">
-                <img src="/api/placeholder/50/50" alt="Abdullah" className="testimonial-avatar" />
-                <div className="testimonial-author">
-                  <h4>Abdullah</h4>
-                  <span>Agency Owner</span>
-                </div>
-              </div>
-              <p>Even though I am not one of Hasnaat's clients, his work is still very impressive to me as a fellow designer, he makes very unique thumbnails and his quality and focus to his craft is incredible.</p>
+              <img src="/api/placeholder/40/40" alt="Abdullah" className="testimonial-avatar" />
+              <span className="testimonial-text">"Even though I am not one of Hasnaat's clients, his work is still very impressive to me as a fellow designer, he makes very unique thumbnails and his quality and focus to his craft is incredible."</span>
+              <span className="testimonial-author">- Abdullah</span>
             </div>
             <div className="testimonial-card">
-              <div className="testimonial-header">
-                <img src="/api/placeholder/50/50" alt="Georgejustdidit" className="testimonial-avatar" />
-                <div className="testimonial-author">
-                  <h4>Georgejustdidit</h4>
-                  <span>Youtube Content Creator</span>
-                </div>
-              </div>
-              <p>Elite Thumbnail Maker! Worth every dime. You don't want to be in the Trenches for 10 Hours, I promise you!!!</p>
+              <img src="/api/placeholder/40/40" alt="Georgejustdidit" className="testimonial-avatar" />
+              <span className="testimonial-text">"Elite Thumbnail Maker! Worth every dime. You don't want to be in the Trenches for 10 Hours, I promise you!!!"</span>
+              <span className="testimonial-author">- Georgejustdidit</span>
             </div>
             <div className="testimonial-card">
-              <div className="testimonial-header">
-                <img src="/api/placeholder/50/50" alt="Felon's Footprint" className="testimonial-avatar" />
-                <div className="testimonial-author">
-                  <h4>Felon's Footprint</h4>
-                  <span>Youtube Content Creator</span>
-                </div>
-              </div>
-              <p>Working with Hasnaat has been an absolute pleasure. He's a dedicated thumbnail artist with a great eye for design, consistently delivering thumbnails that stand out and fit my content perfectly.</p>
+              <img src="/api/placeholder/40/40" alt="Felon's Footprint" className="testimonial-avatar" />
+              <span className="testimonial-text">"Working with Hasnaat has been an absolute pleasure. He's a dedicated thumbnail artist with a great eye for design, consistently delivering thumbnails that stand out and fit my content perfectly."</span>
+              <span className="testimonial-author">- Felon's Footprint</span>
             </div>
           </div>
         </div>
